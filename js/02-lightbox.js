@@ -6,18 +6,21 @@ const imageList= document.querySelector('.gallery');
 const imagesListItems = createCards(galleryItems)
 imageList.insertAdjacentHTML('beforeend', imagesListItems)
 imageList.addEventListener('click',onContainerOpen)
-function createCards(items){
-return items.map(({original,preview,description})=>`
+function createCards(galerryItems){
+return galerryItems.map(({original,preview,description})=>{
+return`
 <li class="gallery__item">
    <a class="gallery__link" href="${original}">
       <img class="gallery__image" src="${preview}" alt="${description}" />
    </a>
-</li>
- .join('')`)
+</li>`})
+.join('')
+
 }
+
 function onContainerOpen(event){
     event.preventDefault()
-    if(!event.target.nodeName !=='IMG'){
+    if(!event.target.containst ('gallery__image')){
         return
     }
     console.log(event.target)
