@@ -18,8 +18,13 @@ return`
 
 function onContainerOpen(event){
     event.preventDefault()
-    if(!event.target.containst ('gallery__image')){
+    if(!event.target.contains ('gallery__image')){
         return
     }
     console.log(event.target)
     }
+new Simplelightbox(`.gallery a`,{
+   captionsData:'alt',
+   captionDelay: 250,
+   
+})
