@@ -23,8 +23,8 @@ function onContainerOpen(event){
     }
     console.log(event.target)
     }
-new Simplelightbox(`.gallery a`,{
+ const lightBox = new Simplelightbox(`.gallery__image ,`{
    captionsData:'alt',
    captionDelay: 250,
-   
+
 })

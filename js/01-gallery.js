@@ -29,7 +29,7 @@ event.preventDefault()
 if(!event.target.classList.contains('gallery__image')){
     return
 }
-const imageSrc= event.target.dataset.sourse
+const imageSrc= event.target.dataset.source
 const intance= basicLightbox.create(`
 <img src='${imageSrc}' width='' height''>`)
 intance.show()
