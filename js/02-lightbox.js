@@ -5,7 +5,7 @@ console.log(galleryItems);
 const imageList= document.querySelector('.gallery');
 const imagesListItems = createCards(galleryItems)
 imageList.insertAdjacentHTML('beforeend', imagesListItems)
-imageList.addEventListener('click',onContainerOpen)
+// imageList.addEventListener('click',onContainerOpen)
 function createCards(galerryItems){
 return galerryItems.map(({original,preview,description})=>{
 return`
@@ -16,19 +16,16 @@ return`
 </li>`})
 .join('')}
 
-function onContainerOpen(event){
-    event.preventDefault()
-    if(!event.target.contains('gallery__image')){
-        return
-    }
-    console.log(event.target)
-    const lightBox = new Simplelightbox('.gallery__image',{
-      captionsData:'alt',
-       captionDelay: 250,
-    })
+// function onContainerOpen(event){
+//     event.preventDefault()
+//     if(!event.target.contains('gallery__image')){
+//         return
+//     }
+//     console.log(event.target)
+  
    
-    }
- const lightBox = new Simplelightbox('.gallery__image',{
-   captionsData:'alt',
-    captionDelay: 250,
- })
+//     }
+ const lightBox = new SimpleLightbox(".gallery a", {
+   captionsData: "alt",
+   captionDelay: 250,
+ });
